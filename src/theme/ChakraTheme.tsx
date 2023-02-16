@@ -6,7 +6,11 @@ const theme = extendTheme({
   },
   colors: {
     Brand: {
-      // TODO: Color palette goes here
+      Maastricht: '#011627',
+      Powder: '#FDFFFC',
+      Aqua: '#2EC4B6',
+      Crimson: '#E71D36',
+      Dahlia: '#FF9F1C'
     }
   }
 });

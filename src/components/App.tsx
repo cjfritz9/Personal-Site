@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router';
 
 const App: React.FC = () => {
   return (
-    <Box className='App' maxW='100vw' overflowX='hidden'>
+    <Box className='App'>
       {/* <Navigation /> */}
       <Routes>
         {/* <Route path='/' element={<Home />} /> */}
