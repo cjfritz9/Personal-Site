@@ -1,13 +1,12 @@
-import { Box } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react';
 import { Routes, Route } from 'react-router';
+import Navigation from './Navigation';
 
 const App: React.FC = () => {
   return (
-    <Box className='App'>
-      {/* <Navigation /> */}
-      <Routes>
-        {/* <Route path='/' element={<Home />} /> */}
-      </Routes>
+    <Box minH='100vh' minW='100vw' overflowX='hidden' bgColor='Brand.Gunmetal'>
+      <Navigation />
+      <Routes>{/* <Route path='/' element={<Home />} /> */}</Routes>
       {/* <Ankle /> */}
       {/* <Footer /> */}
     </Box>

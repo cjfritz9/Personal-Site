@@ -1,0 +1,1 @@
+cursor effect - something that trails the cursor and transforms when hovering a clickable element

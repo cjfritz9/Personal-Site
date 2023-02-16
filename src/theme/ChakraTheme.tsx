@@ -3,14 +3,30 @@ import { extendTheme } from '@chakra-ui/react';
 const theme = extendTheme({
   components: {
     // TODO: Default component themes go here
+    Link: {
+      baseStyle: {
+        _hover: {
+          color: 'Brand.Sienna',
+          textDecoration: 'none',
+          transform: 'scale(1.05)',
+          transition: 'transform .4s ease'
+        },
+        color: 'Brand.Cyan',
+        fontWeight: 'bold',
+        fontFamily: 'Poppins',
+        textShadow: '0px 0px 5px #2C2C2C',
+        userSelect: 'none'
+      }
+    }
   },
   colors: {
     Brand: {
-      Maastricht: '#011627',
-      Powder: '#FDFFFC',
-      Aqua: '#2EC4B6',
-      Crimson: '#E71D36',
-      Dahlia: '#FF9F1C'
+      Charcoal: '#2C2C2C',
+      MetalBlue: '#3D5A80',
+      PaleBlue: '#98C1D9',
+      Cyan: '#E0FBFC',
+      Sienna: '#EE6C4D',
+      Gunmetal: '#293241'
     }
   }
 });
