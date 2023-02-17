@@ -8,3 +8,8 @@ export interface ProjectProps {
   thumbnail: string;
   href: string;
 }
+
+export interface NavLinkProps {
+  text: string;
+  fontSize?: string;
+}

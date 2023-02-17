@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
 import { Box, Flex, Link, Text } from '@chakra-ui/react';
+import { useContext } from 'react';
+import { SiteContext } from '../context/SiteContext';
+import NavLink from './NavLink';
 
 const Navigation: React.FC = () => {
   return (
@@ -30,22 +32,19 @@ const Navigation: React.FC = () => {
         left='0%'
         top='50%'
       /> */}
-      <Box w='20%'>
-        <Link
-          color='Brand.Cyan'
-          userSelect='none'
+      <Box>
+        <NavLink
+          text='C.J. Fritz'
           fontSize='32'
           // letterSpacing='1px'
-          textAlign='center'
-        >
-          C.J. Fritz
-        </Link>
+        />
       </Box>
-      <Flex gap='3rem' w='20%' justifyContent='flex-end'>
-        <Link>Home</Link>
-        <Link>About</Link>
-        <Link>Blog</Link>
-        <Link>Demos</Link>
+      <Flex gap='3rem' justifyContent='flex-end'>
+        <NavLink text='Home' />
+        <NavLink text='About' />
+        <NavLink text='Blog' />
+        <NavLink text='Demos' />
+        <NavLink text='Contact' />
       </Flex>
     </Flex>
   );
