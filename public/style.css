@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&family=Inter&family=Marcellus&family=Poppins&display=swap');
 
+:root {
+  --cursor: url('Cursor.png'), auto;
+  --cursorHover: url('CursorLG.png'), auto;
+}
+
 body {
-  cursor: url('Cursor.png'), auto;
+  cursor: var(--cursor)
 }
 
 ::-webkit-scrollbar {

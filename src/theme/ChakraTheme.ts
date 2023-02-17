@@ -11,12 +11,12 @@ const theme = extendTheme({
           textDecoration: 'none',
           transform: 'scale(1.05)',
           bgColor: '#FFFFFF20',
-          transition: 'transform .5s ease, color .5s ease, box-shadow 1s ease, background 1s ease'
+          transition: 'transform .25s ease, color .25s ease, box-shadow .25s ease, background .25s ease'
         },
         paddingX: '6px',
         paddingY: '3px',
         borderRadius: '10px',
-        cursor: 'none',
+        cursor: 'var(--cursorHover)',
         color: 'Brand.Cyan',
         fontWeight: 'bold',
         fontFamily: 'Poppins',
