@@ -44,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
         top='30%'
         left='44%'
         color='#EE6C4D35'
-        textShadow='0 5px 0px #EE6C4D25, 0 0 40px #EE6C4D50'
+        textShadow='0 -10px 0px #EE6C4D25, 0 0 40px #EE6C4D50'
         fontSize='72px'
         textAlign='center'
         zIndex={3}

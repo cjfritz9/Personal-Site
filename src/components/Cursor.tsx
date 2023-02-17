@@ -11,16 +11,17 @@ const Cursor: React.FC<any> = () => {
   return (
     <Box
       display={
-        mousePosition.x && mousePosition.y && !isHovering ? 'block' : 'none'
+        mousePosition.x > 5 && mousePosition.y > 5 && !isHovering
+          ? 'block'
+          : 'none'
       }
       pos='absolute'
       top={mousePosition.y - 6.5 + 'px'}
       left={mousePosition.x - 6.5 + 'px'}
       pointerEvents='none'
-      bgColor='#FFFFFF15'
-      filter='brightness(2.5)'
-      boxShadow='0 0 10px white'
-      mixBlendMode='plus-lighter'
+      bgColor='#FFFFFF35'
+      boxShadow='0 0 15px #E0FBFC50'
+      mixBlendMode='hard-light'
       h='20px'
       w='20px'
       borderRadius='50%'

@@ -11,16 +11,18 @@ const Project: React.FC<ProjectProps> = ({ title, thumbnail, href }) => {
     window.open(href, '_blank');
   };
 
-  useEffect(() => {
-    setIsHovering(isHovered);
-  }, [setIsHovered]);
+  const handleHover = (toggle: boolean) => {
+    setIsHovering(toggle);
+    setIsHovered(toggle);
+  }
 
   return (
     <Box mx='6rem' py='3rem' onClick={() => handleNavigate(href)}>
       <Heading
         _hover={{
           color: 'Brand.PaleBlue',
-          transition: 'color .5s ease'
+          textShadow: '0 0 10px #FFFFFF50',
+          transition: 'color .5s ease, text-shadow .25s ease'
         }}
         w='fit-content'
         userSelect='none'
@@ -35,18 +37,16 @@ const Project: React.FC<ProjectProps> = ({ title, thumbnail, href }) => {
       <Box
         cursor='var(--cursorHover)'
         pos='relative'
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => handleHover(true)}
+        onMouseLeave={() => handleHover(false)}
       >
         <Image
           filter={isHovered ? 'brightness(.6)' : 'brightness(1)'}
-          _hover={{ boxShadow: '0 0 10px #E0FBFC' }}
-          transition='filter .3s ease'
+          boxShadow={isHovered ? '0 0 10px #E0FBFC' : 'none'}
+          transition='filter .25s ease, box-shadow .25s ease'
           src={thumbnail}
           h='250px'
           borderRadius='10px'
-          onMouseLeave={() => setIsHovering(false)}
-          onMouseEnter={() => setIsHovering(true)}
         />
         {isHovered && (
           <Text
