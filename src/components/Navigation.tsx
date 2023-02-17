@@ -6,11 +6,13 @@ const Navigation: React.FC = () => {
     <Flex
       w='100vw'
       h='64px'
-      bgColor='Brand.MetalBlue'
+      bgColor='Brand.Gunmetal'
       justifyContent='space-between'
       alignItems='center'
       px='6rem'
       pos='relative'
+      dropShadow='10px -10px 10px #293241'
+      zIndex={5}
     >
       {/* <Box
         pos='absolute'
@@ -28,33 +30,21 @@ const Navigation: React.FC = () => {
         left='0%'
         top='50%'
       /> */}
-      <Box>
+      <Box w='20%'>
         <Link
-          cursor='pointer'
-          fontFamily='Fira Mono'
-          fontSize='36'
-          fontWeight='700'
-          letterSpacing='-1px'
-        >
-          {'</>'}
-        </Link>
-      </Box>
-      <Box w='90vw' pos='absolute' pointerEvents='none'>
-        <Text
           color='Brand.Cyan'
           userSelect='none'
           fontSize='32'
-          fontFamily='Poppins'
-          fontWeight='bold'
-          letterSpacing='1px'
+          // letterSpacing='1px'
           textAlign='center'
         >
           C.J. Fritz
-        </Text>
+        </Link>
       </Box>
-      <Flex gap='3rem'>
+      <Flex gap='3rem' w='20%' justifyContent='flex-end'>
         <Link>Home</Link>
         <Link>About</Link>
+        <Link>Blog</Link>
         <Link>Demos</Link>
       </Flex>
     </Flex>

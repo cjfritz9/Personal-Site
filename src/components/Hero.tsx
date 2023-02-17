@@ -2,10 +2,9 @@ import { Box, Heading, Image, Stack } from '@chakra-ui/react';
 import { HeroProps } from '../models/Props';
 
 const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
-  console.log(imageLink);
 
   return (
-    <Stack pos='relative' w='100vw'>
+    <Stack pos='relative' w='100vw' mb='3rem'>
       <Box
         top='0%'
         pos='absolute'
@@ -30,11 +29,26 @@ const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
         userSelect='none'
         top='14%'
         left='44%'
-        color='Brand.PaleBlue'
+        color='Brand.Sienna'
         fontSize='72px'
-        textShadow='0px 72px 7px #98C1D950'
         textAlign='center'
         zIndex={3}
+        fontFamily='Poppins'
+      >
+        {heading}
+      </Heading>
+      <Heading
+        pos='absolute'
+        userSelect='none'
+        transform='scale(1, -1)'
+        top='30%'
+        left='44%'
+        color='#EE6C4D35'
+        textShadow='0 5px 0px #EE6C4D25, 0 0 40px #EE6C4D50'
+        fontSize='72px'
+        textAlign='center'
+        zIndex={3}
+        fontFamily='Poppins'
       >
         {heading}
       </Heading>

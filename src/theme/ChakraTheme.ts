@@ -9,7 +9,7 @@ const theme = extendTheme({
           color: 'Brand.Sienna',
           textDecoration: 'none',
           transform: 'scale(1.05)',
-          transition: 'transform .4s ease'
+          transition: 'transform .2s ease'
         },
         color: 'Brand.Cyan',
         fontWeight: 'bold',
