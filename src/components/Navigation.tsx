@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
   return (
     <Flex
       w='100vw'
-      h='64px'
+      h='72px'
       bgColor='Brand.Gunmetal'
       justifyContent='space-between'
       alignItems='center'

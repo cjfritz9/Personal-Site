@@ -7,19 +7,21 @@ const theme = extendTheme({
       baseStyle: {
         _hover: {
           color: 'Brand.Sienna',
-          borderBottom: '2px solid #FFFFFF25',
+          boxShadow: '0 0 10px #FFFFFF40',
           textDecoration: 'none',
           transform: 'scale(1.05)',
-          transition: 'transform .5s ease, color .5s ease'
+          bgColor: '#FFFFFF20',
+          transition: 'transform .5s ease, color .5s ease, box-shadow 1s ease, background 1s ease'
         },
-        borderBottom: '2px solid transparent',
+        paddingX: '6px',
+        paddingY: '3px',
+        borderRadius: '10px',
         cursor: 'none',
         color: 'Brand.Cyan',
         fontWeight: 'bold',
         fontFamily: 'Poppins',
         textShadow: '0px 0px 5px #2C2C2C',
         userSelect: 'none'
-
       }
     }
   },

@@ -15,6 +15,7 @@ const CurrentProjects: React.FC = () => {
         size='4xl'
         textAlign='left'
         w='fit-content'
+        textShadow='0 0 10px #FFFFFF25'
       >
         CURRENT PROJECTS
       </Heading>

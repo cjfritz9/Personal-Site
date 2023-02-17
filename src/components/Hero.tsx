@@ -2,7 +2,6 @@ import { Box, Heading, Image, Stack } from '@chakra-ui/react';
 import { HeroProps } from '../models/Props';
 
 const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
-
   return (
     <Stack pos='relative' w='100vw' mb='3rem'>
       <Box
@@ -34,6 +33,7 @@ const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
         textAlign='center'
         zIndex={3}
         fontFamily='Poppins'
+        textShadow='0 0 10px #FFFFFF25'
       >
         {heading}
       </Heading>
