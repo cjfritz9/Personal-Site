@@ -21,7 +21,9 @@ const App: React.FC = () => {
             pos='absolute'
             top={mouseTrail[0].y}
             left={mouseTrail[0].x}
-            bgColor='#E0FBFC25'
+            bgColor='transparent'
+            filter='brightness(2.5)'
+            boxShadow='0 0 10px white'
             h='25px'
             w='25px'
             borderRadius='50%'
