@@ -10,5 +10,13 @@ export interface ProjectProps {
 
 export interface NavLinkProps {
   text: string;
+  altLink?: string;
   fontSize?: string;
+}
+
+export interface BlogPostProps {
+  title: string;
+  thumbnail: string;
+  body: string;
+  link: string;
 }

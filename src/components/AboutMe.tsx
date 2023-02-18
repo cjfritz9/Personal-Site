@@ -8,7 +8,8 @@ const AboutMe: React.FC = () => {
         <Heading
           userSelect='none'
           ml='6rem'
-          py='3rem'
+          pt='3rem'
+          pb='6rem'
           fontFamily='Poppins'
           color='Brand.MetalBlue'
           size='4xl'

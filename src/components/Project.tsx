@@ -17,7 +17,7 @@ const Project: React.FC<ProjectProps> = ({ title, thumbnail, href }) => {
   }
 
   return (
-    <Box mx='6rem' py='3rem' onClick={() => handleNavigate(href)}>
+    <Box mx='6rem' pb='3rem' onClick={() => handleNavigate(href)}>
       <Heading
         _hover={{
           color: 'Brand.PaleBlue',

@@ -7,6 +7,7 @@ import Cursor from './Cursor';
 import Loading from './Loading';
 import Navigation from './Navigation';
 import About from './pages/About';
+import Blog from './pages/Blog';
 import Home from './pages/Home';
 
 const App: React.FC = () => {
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
       {/* <Ankle /> */}
       {/* <Footer /> */}

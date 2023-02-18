@@ -5,12 +5,16 @@ import { SiteContext } from '../context/SiteContext';
 import useLoadingNavigate from '../hooks/UseLoadingNavigate';
 import { useNavigate } from 'react-router';
 
-const NavLink: React.FC<NavLinkProps> = ({ text, fontSize }) => {
+const NavLink: React.FC<NavLinkProps> = ({ text, fontSize, altLink }) => {
   const { setIsHovering, setIsLoading } = useContext<any>(SiteContext);
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    useLoadingNavigate(text, navigate, setIsLoading);
+    if (altLink) {
+      useLoadingNavigate(altLink, navigate, setIsLoading);
+    } else {
+      useLoadingNavigate(text, navigate, setIsLoading);
+    }
   };
 
   return (
