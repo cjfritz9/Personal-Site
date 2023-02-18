@@ -8,6 +8,7 @@ import Loading from './Loading';
 import Navigation from './Navigation';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import Demos from './pages/Demos';
 import Home from './pages/Home';
 
 const App: React.FC = () => {
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/demos' element={<Demos />} />
       </Routes>
       {/* <Ankle /> */}
       {/* <Footer /> */}

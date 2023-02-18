@@ -1,6 +1,4 @@
-import React from 'react';
-import { NavigateFunction, useNavigate } from 'react-router';
-import { SiteContext } from '../context/SiteContext';
+import { NavigateFunction } from 'react-router';
 
 const useLoadingNavigate = (
   path: string,

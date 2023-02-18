@@ -20,3 +20,11 @@ export interface BlogPostProps {
   body: string;
   link: string;
 }
+
+export interface ProductProps {
+  title: string;
+  description: string;
+  deployment: string;
+  repo: string;
+  demo: string;
+}
