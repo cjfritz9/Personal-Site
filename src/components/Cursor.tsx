@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { SiteContext } from '../context/SiteContext';
-import useMousePosition from '../utils/helpers';
+import useMousePosition from '../hooks/UseMousePosition';
 
 const Cursor: React.FC<any> = () => {
   const mousePosition = useMousePosition();

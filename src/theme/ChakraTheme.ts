@@ -11,7 +11,8 @@ const theme = extendTheme({
           textDecoration: 'none',
           transform: 'scale(1.05)',
           // bgColor: '#FFFFFF20',
-          transition: 'transform .25s ease, color .25s ease, text-shadow .25s ease, background .25s ease'
+          transition:
+            'transform .25s ease, color .25s ease, text-shadow .25s ease, background .25s ease'
         },
         paddingX: '6px',
         paddingY: '3px',

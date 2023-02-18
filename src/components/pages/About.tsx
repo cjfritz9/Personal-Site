@@ -3,14 +3,15 @@ import { Box } from '@chakra-ui/react';
 import Hero from '../Hero';
 
 import CurrentProjects from '../CurrentProjects';
+import AboutMe from '../AboutMe';
 
-const Home: React.FC = () => {
+const About: React.FC = () => {
   return (
     <Box>
-      <Hero heading='HOME' />
-      <CurrentProjects />
+      <Hero heading='ABOUT' />
+      <AboutMe />
     </Box>
   );
 };
 
-export default Home;
+export default About;

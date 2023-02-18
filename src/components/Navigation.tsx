@@ -6,7 +6,7 @@ import NavLink from './NavLink';
 const Navigation: React.FC = () => {
   return (
     <Flex
-      w='100vw'
+      maxW='100vw'
       h='72px'
       bgColor='Brand.Gunmetal'
       justifyContent='space-between'
@@ -40,7 +40,6 @@ const Navigation: React.FC = () => {
         />
       </Box>
       <Flex gap='3rem' justifyContent='flex-end'>
-        <NavLink text='Home' />
         <NavLink text='About' />
         <NavLink text='Blog' />
         <NavLink text='Demos' />

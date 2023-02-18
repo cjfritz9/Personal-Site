@@ -1,9 +1,12 @@
 import { Box, Heading, Image, Stack } from '@chakra-ui/react';
 import { HeroProps } from '../models/Props';
 
-const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
+import heroImage from '../assets/hero_home.jpg';
+
+
+const Hero: React.FC<HeroProps> = ({ heading }) => {
   return (
-    <Stack pos='relative' w='100vw' mb='3rem'>
+    <Stack pos='relative' maxW='100vw' mb='3rem' overflowX='hidden'>
       <Box
         top='0%'
         pos='absolute'
@@ -16,11 +19,12 @@ const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
       <Image
         userSelect='none'
         mt='0px !important'
-        src={imageLink}
+        src={heroImage}
         objectFit='cover'
         objectPosition='top center'
         filter='brightness(.40)'
         maxH={['160px', '160px', '480px']}
+        maxW='100vw'
         zIndex={1}
       />
       <Heading
@@ -44,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ imageLink, heading }) => {
         top='30%'
         left='44%'
         color='#EE6C4D35'
-        textShadow='0 -10px 0px #EE6C4D25, 0 0 40px #EE6C4D50'
+        textShadow='0 -6px 0px #EE6C4D25, 0 0 40px #EE6C4D50'
         fontSize='72px'
         textAlign='center'
         zIndex={3}
