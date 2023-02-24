@@ -24,10 +24,10 @@ const ContactMe: React.FC = () => {
           C.J. Fritz
         </Heading>
         <Divider borderColor='Brand.MetalBlue' />
-        <Heading color='Brand.Cyan' size='sm'>
+        <Heading fontFamily='Poppins' fontSize='16px' pl='7px' color='Brand.Cyan' size='sm'>
           Denver, CO
         </Heading>
-        <Heading color='Brand.Cyan' size='sm'>
+        <Heading fontFamily='Poppins' fontSize='16px' pl='7px' color='Brand.Cyan' size='sm'>
           dev.cjfritz@gmail.com
         </Heading>
         <NavLink
