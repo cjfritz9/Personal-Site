@@ -5,7 +5,7 @@ import heroImage from '../assets/hero_home.jpg';
 
 const Hero: React.FC<HeroProps> = ({ heading }) => {
   return (
-    <Stack pos='relative' maxW='100vw' mb='3rem' overflowX='hidden'>
+    <Stack pos='relative' maxW='100vw' mb='3rem' overflow='hidden'>
       <Box
         top='0%'
         pos='absolute'
@@ -22,21 +22,18 @@ const Hero: React.FC<HeroProps> = ({ heading }) => {
         objectFit='cover'
         objectPosition='top center'
         filter='brightness(.40)'
-        maxH={['160px', '160px', '480px']}
+        maxH={['160px', '160px', '320px', '480px']}
         maxW='100vw'
         zIndex={1}
       />
-      <Stack
-        w='100%'
-        justify='center'
-      >
+      <Stack w='100%' justify='center'>
         <Heading
           w='100%'
           pos='absolute'
           userSelect='none'
-          top='14%'
+          top={['6dvh','9dvh','1dvh', '4dvh', '6dvh', '12dvh']}
           color='Brand.Sienna'
-          fontSize='72px'
+          fontSize={['40px', '48px', '72px']}
           textAlign='center'
           zIndex={3}
           fontFamily='Poppins'
@@ -45,14 +42,15 @@ const Hero: React.FC<HeroProps> = ({ heading }) => {
           {heading}
         </Heading>
         <Heading
+          display={['none', 'none', 'block']}
           w='100%'
           pos='absolute'
           userSelect='none'
           transform='scale(1, -1)'
-          top='30%'
+          top={['','','10dvh', '13dvh', '15dvh', '24dvh']}
           color='#EE6C4D35'
           textShadow='0 -6px 0px #EE6C4D25, 0 0 40px #EE6C4D50'
-          fontSize='72px'
+          fontSize={['40px', '48px', '72px']}
           textAlign='center'
           zIndex={3}
           fontFamily='Poppins'

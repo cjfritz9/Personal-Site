@@ -26,7 +26,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
 
   return (
     <Skeleton
-      h='336px'
+      minH='336px'
       w='100%'
       isLoaded={blog && blog.title ? true : false}
       fadeDuration={1.5}
@@ -64,10 +64,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
                 onMouseLeave={() => setIsHovering(false)}
                 onClick={() => window.open(blog.url, '_blank')}
               />
-              <Stack
-                minW='160px'
-                justifyContent='space-between'
-              >
+              <Stack minW='160px' justifyContent='space-between'>
                 <Text
                   userSelect='none'
                   pt='1rem'

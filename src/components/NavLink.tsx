@@ -16,30 +16,36 @@ const NavLink: React.FC<NavLinkProps> = ({
 
   const handleNavigate = () => {
     if (altLink) {
-      if (isExternal) {
-        window.open(altLink, '_blank');
-      } else {
-        useLoadingNavigate(altLink, navigate, setIsLoading);
-      }
+      useLoadingNavigate(altLink, navigate, setIsLoading);
     } else {
-      if (isExternal) {
-        window.open(text, '_blank');
-      } else {
-        useLoadingNavigate(text, navigate, setIsLoading);
-      }
+      useLoadingNavigate(text, navigate, setIsLoading);
     }
   };
 
-  return (
-    <Link
-      fontSize={fontSize && `${fontSize}px`}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-      onClick={() => handleNavigate()}
-    >
-      {text}
-    </Link>
-  );
+  if (isExternal) {
+    return (
+      <Link
+        isExternal={isExternal}
+        href={altLink ? altLink : text}
+        fontSize={fontSize && `${fontSize}px`}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        {text}
+      </Link>
+    );
+  } else {
+    return (
+      <Link
+        fontSize={fontSize && `${fontSize}px`}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        onClick={() => handleNavigate()}
+      >
+        {text}
+      </Link>
+    );
+  }
 };
 
 export default NavLink;

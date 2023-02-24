@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Box } from '@chakra-ui/react';
+import { Box, useMediaQuery } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { Routes, Route } from 'react-router';
 import { SiteContext } from '../context/SiteContext';
@@ -13,6 +13,7 @@ import Demos from './pages/Demos';
 import Home from './pages/Home';
 
 const App: React.FC = () => {
+  const [isDisplayingInBrowser] = useMediaQuery(['(display-mode: browser)']);
   const { isLoading } = useContext<any>(SiteContext);
 
   return (
@@ -22,9 +23,8 @@ const App: React.FC = () => {
       overflowX='hidden'
       bgColor='Brand.Gunmetal'
       mt='72px'
-      pb='6.5rem'
     >
-      <Cursor />
+      {isDisplayingInBrowser && <Cursor />}
       <Navigation />
       {isLoading && <Loading />}
       <Routes>

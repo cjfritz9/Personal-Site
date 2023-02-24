@@ -48,9 +48,9 @@ const Navigation: React.FC = () => {
       bgColor='Brand.Gunmetal'
       justifyContent='flex-end'
       alignItems='center'
-      px='6rem'
+      px='1.5rem'
       // pos='relative'
-      dropShadow='10px -10px 10px #293241'
+      boxShadow='0px 2px 10px #00000050'
       zIndex={5}
       onMouseEnter={() => handleHoverChange('enter-nav')}
       onMouseLeave={() => handleHoverChange('leave-nav')}
@@ -74,7 +74,7 @@ const Navigation: React.FC = () => {
       <Box
         pos='fixed'
         top='12px'
-        left='5vw'
+        left='24px'
         onMouseEnter={() => handleHoverChange('enter-home')}
         onMouseLeave={() => handleHoverChange('leave-home')}
         zIndex={15}

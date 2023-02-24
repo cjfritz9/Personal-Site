@@ -11,7 +11,7 @@ const DevBlogs: React.FC = () => {
   }, []);
 
   return (
-    <Box>
+    <Box mb='6.5rem !important'>
       <Heading
         ml='6rem'
         userSelect='none'
@@ -39,12 +39,6 @@ const DevBlogs: React.FC = () => {
               return <BlogPost key={i} id={id} />;
             })}
         </Skeleton>
-        <Skeleton
-          h='100%'
-          w='100%'
-          isLoaded={blogIds && blogIds[0] ? true : false}
-          fadeDuration={1}
-        ></Skeleton>
       </Grid>
     </Box>
   );
