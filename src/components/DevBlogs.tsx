@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Grid, Heading } from '@chakra-ui/react';
-import BlogPost from './BlogPost';
 import { fetchTopArticles } from '../api/MediumAPI';
+import BlogPost from './BlogPost';
 
 const DevBlogs: React.FC = () => {
-  const [blogs, setBlogs] = useState<any>();
+  const [blogIds, setBlogIds] = useState<string[]>();
   useEffect(() => {
-    fetchTopArticles(setBlogs);
+    fetchTopArticles(setBlogIds);
   }, []);
 
-  console.log(blogs);
-
-  if (!blogs || !blogs[0]) {
-    return <Box />
+  if (!blogIds) {
+    return <Box />;
   }
 
   return (
@@ -32,9 +30,9 @@ const DevBlogs: React.FC = () => {
         DEV BLOGS
       </Heading>
       <Grid mx='3rem' mb='3rem' templateColumns={['repeat(2, 5fr)']}>
-        {blogs &&
-          blogs.map((blog: any, i: number) => {
-            return <BlogPost key={i} id={blog} />;
+        {blogIds &&
+          blogIds.map((id: string, i: number) => {
+            return <BlogPost key={i} id={id} />;
           })}
       </Grid>
     </Box>
