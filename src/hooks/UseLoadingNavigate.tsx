@@ -6,8 +6,8 @@ const useLoadingNavigate = (
   setIsLoading: Function
 ) => {
   path = path.toLowerCase();
-  console.log(path);
   setIsLoading(true);
+  window.scrollTo({top: 72, behavior: 'smooth'})
   setTimeout(() => {
     navigate(path);
   }, 400);

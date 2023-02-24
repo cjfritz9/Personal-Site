@@ -19,7 +19,7 @@ const Cursor: React.FC<any> = () => {
       top={mousePosition.y - 78.5 + 'px'}
       left={mousePosition.x - 6.5 + 'px'}
       pointerEvents='none'
-      bgColor='#FFFFFF35'
+      bgColor='#E0FBFC25'
       boxShadow='0 0 15px #E0FBFC50'
       mixBlendMode='hard-light'
       h='20px'
