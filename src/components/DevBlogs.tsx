@@ -9,10 +9,6 @@ const DevBlogs: React.FC = () => {
     fetchTopArticles(setBlogIds);
   }, []);
 
-  if (!blogIds) {
-    return <Box />;
-  }
-
   return (
     <Box>
       <Heading
