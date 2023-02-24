@@ -1,12 +1,16 @@
 import { ProductProps } from '../models/Props';
 
+import ASTRA_Thumb from '../assets/astra-thumb.png';
+
 const Products: ProductProps[] = [
   {
-    title: 'Finished Website',
-    description: 'Finished Website is a retro-themed website specializing in selling the rarest TCG cards in existence.',
-    deployment: 'https://www.google.com',
-    repo: 'https://www.github.com',
-    demo: 'https://www.youtube.com'
+    title: 'ASTRA Skincare',
+    description:
+      "ASTRA Skincare is a demo site created as as proof-of-concept to the advantages of using a custom React front-end with the power of Shopify's Admin for business management.",
+    deployment: 'https://astra-skincare.netlify.app',
+    repo: 'https://www.github.com/AtlasCreative/astra-skincare',
+    demo: 'https://www.youtube.com',
+    releaseDate: 'Feb. 23, 2023'
   }
 ];
 

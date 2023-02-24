@@ -5,7 +5,6 @@ const useLoadingNavigate = (
   navigate: NavigateFunction,
   setIsLoading: Function
 ) => {
-  if (path === 'C.J. Fritz') path = '/';
   path = path.toLowerCase();
   console.log(path);
   setIsLoading(true);

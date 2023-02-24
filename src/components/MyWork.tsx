@@ -28,6 +28,7 @@ const MyWork: React.FC = () => {
               deployment={product.deployment}
               repo={product.repo}
               demo={product.demo}
+              releaseDate={product.releaseDate}
             />
           );
         })}

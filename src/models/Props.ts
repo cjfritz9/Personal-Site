@@ -12,13 +12,11 @@ export interface NavLinkProps {
   text: string;
   altLink?: string;
   fontSize?: string;
+  isExternal?: boolean;
 }
 
 export interface BlogPostProps {
-  title: string;
-  thumbnail: string;
-  body: string;
-  link: string;
+  id: string;
 }
 
 export interface ProductProps {
@@ -27,4 +25,5 @@ export interface ProductProps {
   deployment: string;
   repo: string;
   demo: string;
+  releaseDate: string;
 }

@@ -16,7 +16,7 @@ const Cursor: React.FC<any> = () => {
           : 'none'
       }
       pos='absolute'
-      top={mousePosition.y - 6.5 + 'px'}
+      top={mousePosition.y - 78.5 + 'px'}
       left={mousePosition.x - 6.5 + 'px'}
       pointerEvents='none'
       bgColor='#FFFFFF35'

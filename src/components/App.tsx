@@ -14,7 +14,14 @@ import Home from './pages/Home';
 const App: React.FC = () => {
   const { isLoading } = useContext<any>(SiteContext);
   return (
-    <Box minH='100vh' maxW='100vw' overflowX='hidden' bgColor='Brand.Gunmetal'>
+    <Box
+      minH='100vh'
+      maxW='100vw'
+      overflowX='hidden'
+      bgColor='Brand.Gunmetal'
+      mt='72px'
+      pb='6.5rem'
+    >
       <Cursor />
       <Navigation />
       {isLoading && <Loading />}
