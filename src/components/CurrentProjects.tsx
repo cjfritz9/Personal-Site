@@ -7,16 +7,7 @@ const CurrentProjects: React.FC = () => {
   return (
     <Box>
       <Heading
-        userSelect='none'
-        ml='6rem'
-        pt='3rem'
-        pb='6rem'
-        fontFamily='Poppins'
-        color='Brand.MetalBlue'
-        size='4xl'
-        textAlign='left'
-        w='fit-content'
-        textShadow='0 0 10px #FFFFFF25'
+        variant='contentHeading'
       >
         CURRENT PROJECTS
       </Heading>

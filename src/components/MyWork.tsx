@@ -20,9 +20,10 @@ const MyWork: React.FC = () => {
         MY WORK
       </Heading>
       <Grid templateColumns={['repeat(3, 2fr)']}>
-        {Products.map((product) => {
+        {Products.map((product, i) => {
           return (
             <Work
+              key={i}
               title={product.title}
               description={product.description}
               deployment={product.deployment}

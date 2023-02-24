@@ -5,6 +5,12 @@
   --cursorHover: url('CursorLG.png'), auto;
 }
 
+/* DEBUGGING TOOL
+
+* {
+  outline: solid red 1px !important;
+} */
+
 body {
   cursor: var(--cursor);
   overflow-x: hidden;

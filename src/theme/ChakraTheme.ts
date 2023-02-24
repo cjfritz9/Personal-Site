@@ -1,7 +1,10 @@
 import { extendTheme } from '@chakra-ui/react';
+import * as Variants from './ComponentVariants';
 
 const theme = extendTheme({
   components: {
+    Container: Variants.mainContainer,
+    Heading: Variants.headingTheme,
     // TODO: Default component themes go here
     Link: {
       baseStyle: {
