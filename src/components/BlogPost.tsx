@@ -19,7 +19,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
   const [blog, setBlog] = useState<ArticleResponseData | null>(null);
   const [isImageHovered, setIsImageHovered] = useState(false);
   const { setIsHovering } = useContext<any>(SiteContext);
-  const [isLessThan768] = useMediaQuery(['(min-width: 768px)']);
+  const [isLessThan768] = useMediaQuery(['(max-width: 768px)']);
 
   const handleHover = (mouseEvent: 'enter' | 'leave') => {
     if (mouseEvent === 'enter') {
