@@ -42,7 +42,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
       isLoaded={blog && blog.title ? true : false}
       fadeDuration={1.5}
     >
-      <Box w='100%'>
+      <Box w='100%' pr='2rem' py='2rem'>
         {blog && (
           <Stack w='100%' justifyContent='space-between'>
             <Heading
@@ -80,7 +80,6 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
                 transition='filter .5s ease, box-shadow .5s ease'
                 cursor='var(--cursorHover)'
                 objectFit='contain'
-                mr='3rem'
               />
               <Stack
                 transform='auto'
