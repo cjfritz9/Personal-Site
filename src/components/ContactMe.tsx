@@ -5,20 +5,32 @@ import NavLink from './NavLink';
 const ContactMe: React.FC = () => {
   return (
     <Container>
-      <Heading
-        variant='contentHeading'
+      <Heading variant='contentHeading'>CONTACT ME</Heading>
+      <Stack
+        gap='1rem'
+        w={['100%', 'fit-content']}
+        alignItems={['center', 'left']}
       >
-        CONTACT ME
-      </Heading>
-      <Stack gap='1rem' w={['100%', 'fit-content']} alignItems={['center', 'left']}>
         <Heading color='Brand.Sienna' size='xl'>
           C.J. Fritz
         </Heading>
         <Divider borderColor='Brand.MetalBlue' />
-        <Heading fontFamily='Poppins' fontSize='16px' pl='7px' color='Brand.Cyan' size='sm'>
+        <Heading
+          fontFamily='Poppins'
+          fontSize='16px'
+          pl='7px'
+          color='Brand.Cyan'
+          size='sm'
+        >
           Denver, CO
         </Heading>
-        <Heading fontFamily='Poppins' fontSize='16px' pl='7px' color='Brand.Cyan' size='sm'>
+        <Heading
+          fontFamily='Poppins'
+          fontSize='16px'
+          pl='7px'
+          color='Brand.Cyan'
+          size='sm'
+        >
           dev.cjfritz@gmail.com
         </Heading>
         <NavLink
