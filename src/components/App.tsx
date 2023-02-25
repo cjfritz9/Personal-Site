@@ -13,7 +13,7 @@ import Demos from './pages/Demos';
 import Home from './pages/Home';
 
 const App: React.FC = () => {
-  const [isDisplayingInBrowser] = useMediaQuery(['(display-mode: browser)']);
+  const [isGreaterThan768] = useMediaQuery(['(min-width: 768px)']);
   const { isLoading } = useContext<any>(SiteContext);
 
   return (
@@ -24,7 +24,7 @@ const App: React.FC = () => {
       bgColor='Brand.Gunmetal'
       mt='72px'
     >
-      {isDisplayingInBrowser && <Cursor />}
+      {isGreaterThan768 && <Cursor />}
       <Navigation />
       {isLoading && <Loading />}
       <Routes>

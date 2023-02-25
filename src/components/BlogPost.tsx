@@ -20,7 +20,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
   const [blog, setBlog] = useState<ArticleResponseData | null>(null);
   const [isImageHovered, setIsImageHovered] = useState(false);
   const { setIsHovering } = useContext<any>(SiteContext);
-  const [isDisplayingInBrowser] = useMediaQuery(['(display-mode: browser)']);
+  const [isLessThan768] = useMediaQuery(['(min-width: 768px)']);
 
   const handleHover = (mouseEvent: 'enter' | 'leave') => {
     if (mouseEvent === 'enter') {
@@ -62,7 +62,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
             <Flex
               w='100%'
               pos='relative'
-              overflow={['visible','hidden']}
+              overflow={['visible', 'hidden']}
               mt='1.5rem !important'
               onMouseEnter={() => handleHover('enter')}
               onMouseLeave={() => handleHover('leave')}
@@ -71,14 +71,12 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
               <Image
                 src={blog.image_url}
                 filter={
-                  isImageHovered || !isDisplayingInBrowser
+                  isImageHovered || isLessThan768
                     ? 'brightness(.1)'
                     : 'brightness(1)'
                 }
                 boxShadow={
-                  isImageHovered || !isDisplayingInBrowser
-                    ? '0 0 10px #E0FBFC'
-                    : 'none'
+                  isImageHovered || isLessThan768 ? '0 0 10px #E0FBFC' : 'none'
                 }
                 transition='filter .5s ease, box-shadow .5s ease'
                 cursor='var(--cursorHover)'
@@ -87,9 +85,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
               />
               <Stack
                 transform='auto'
-                translateY={
-                  isImageHovered || !isDisplayingInBrowser ? '-100%' : '0%'
-                }
+                translateY={isImageHovered || isLessThan768 ? '-100%' : '0%'}
                 transition='transform .5s ease'
                 top='100%'
                 px={['1rem', '2rem']}
