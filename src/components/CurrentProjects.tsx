@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Grid, Heading } from '@chakra-ui/react';
+import { Box, Container, Grid, Heading } from '@chakra-ui/react';
 import Project from './Project';
 import Projects from '../db/Projects';
 
 const CurrentProjects: React.FC = () => {
   return (
-    <Box>
+    <Container>
       <Heading
         variant='contentHeading'
       >
@@ -32,7 +32,7 @@ const CurrentProjects: React.FC = () => {
           );
         })}
       </Grid>
-    </Box>
+    </Container>
   );
 };
 

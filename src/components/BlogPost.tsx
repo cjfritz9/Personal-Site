@@ -98,7 +98,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
                   userSelect='none'
                   pl='4px'
                   fontFamily='Poppins'
-                  fontSize={['14px', '18px', '22px', '16px', '18px', '24px']}
+                  fontSize={['14px', '18px', '16px', '16px', '18px', '24px']}
                   color='Brand.PaleBlue'
                   textShadow='0 0 10px #FFFFFF25'
                 >

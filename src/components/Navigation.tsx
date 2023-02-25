@@ -71,8 +71,8 @@ const Navigation: React.FC = () => {
   };
 
   useEffect(() => {
-    setIsMenuOpen(false)
-  }, [navigate])
+    setIsMenuOpen(false);
+  }, [navigate]);
 
   useEffect(() => {
     if (isLessThan768) {
@@ -85,7 +85,7 @@ const Navigation: React.FC = () => {
   }, [isLessThan768]);
 
   useEffect(() => {
-    if (isMenuOpen && touchPosition.start <= 100) return;
+    if (isMenuOpen && touchPosition.start <= 120) return;
     if (touchPosition.start && touchPosition.end) {
       if (touchPosition.start > touchPosition.end) {
         setShowNav(false);
@@ -167,14 +167,18 @@ const Navigation: React.FC = () => {
               borderColor='Brand.Charcoal'
               color='Brand.Cyan'
             >
-              <Flex h='fit-content' w='100%' gap={['','2rem']} justify='space-between'>
-
-              {/* <Stack alignItems='flex-end'> */}
-              <NavLink text='About' fontSize='14' />
-              <NavLink text='Blog' fontSize='14' />
-              <NavLink text='Demos' fontSize='14' />
-              <NavLink text='Contact' fontSize='14' />
-              {/* </Stack> */}
+              <Flex
+                h='fit-content'
+                w='100%'
+                gap={['', '2rem']}
+                justify='space-between'
+              >
+                {/* <Stack alignItems='flex-end'> */}
+                <NavLink text='About' fontSize='14' />
+                <NavLink text='Blog' fontSize='14' />
+                <NavLink text='Demos' fontSize='14' />
+                <NavLink text='Contact' fontSize='14' />
+                {/* </Stack> */}
               </Flex>
             </MenuList>
           </Menu>

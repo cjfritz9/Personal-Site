@@ -17,18 +17,19 @@ const Project: React.FC<ProjectProps> = ({ title, thumbnail, href }) => {
   }
 
   return (
-    <Box mx='6rem' pb='3rem' onClick={() => handleNavigate(href)}>
+    <Box onClick={() => handleNavigate(href)}>
       <Heading
         _hover={{
           color: 'Brand.PaleBlue',
           textShadow: '0 0 10px #FFFFFF50',
           transition: 'color .5s ease, text-shadow .25s ease'
         }}
-        w='fit-content'
+        w='100%'
         userSelect='none'
         color='Brand.Cyan'
         fontFamily='Inter'
         mb='1rem'
+        textAlign={['center', 'left']}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -45,7 +46,8 @@ const Project: React.FC<ProjectProps> = ({ title, thumbnail, href }) => {
           boxShadow={isHovered ? '0 0 10px #E0FBFC' : 'none'}
           transition='filter .25s ease, box-shadow .25s ease'
           src={thumbnail}
-          h='250px'
+          objectFit='contain'
+          maxH='360px'
           borderRadius='10px'
         />
         {isHovered && (

@@ -1,25 +1,16 @@
 import React from 'react';
-import { Divider, Flex, Heading, Stack } from '@chakra-ui/react';
+import { Container, Divider, Flex, Heading, Stack } from '@chakra-ui/react';
 import NavLink from './NavLink';
 
 const ContactMe: React.FC = () => {
   return (
-    <Stack>
+    <Container>
       <Heading
-        userSelect='none'
-        ml='6rem'
-        pt='3rem'
-        pb='6rem'
-        fontFamily='Poppins'
-        color='Brand.MetalBlue'
-        size='4xl'
-        textAlign='left'
-        w='fit-content'
-        textShadow='0 0 10px #FFFFFF25'
+        variant='contentHeading'
       >
         CONTACT ME
       </Heading>
-      <Stack mx='6rem !important' gap='1rem' w='fit-content'>
+      <Stack gap='1rem' w={['100%', 'fit-content']} alignItems={['center', 'left']}>
         <Heading color='Brand.Sienna' size='xl'>
           C.J. Fritz
         </Heading>
@@ -41,7 +32,7 @@ const ContactMe: React.FC = () => {
           isExternal={true}
         />
       </Stack>
-    </Stack>
+    </Container>
   );
 };
 
