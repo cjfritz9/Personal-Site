@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Flex, Grid, Heading, Skeleton } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Skeleton
+} from '@chakra-ui/react';
 import { fetchTopArticles } from '../api/MediumAPI';
 import BlogPost from './BlogPost';
 
@@ -11,22 +18,19 @@ const DevBlogs: React.FC = () => {
   }, []);
 
   return (
-    <Box mb='6.5rem !important'>
+    <Container>
       <Heading
-        ml='6rem'
-        userSelect='none'
-        pt='3rem'
-        pb='6rem'
-        fontFamily='Poppins'
-        color='Brand.MetalBlue'
-        size='4xl'
-        textAlign='left'
-        w='fit-content'
-        textShadow='0 0 10px #FFFFFF25'
+        variant='contentHeading'
       >
         DEV BLOGS
       </Heading>
-      <Grid mx='6rem' templateColumns={['repeat(2, 5fr)']}>
+      <Grid
+        templateColumns={[
+          'repeat(1, 10fr)',
+          'repeat(1, 10fr)',
+          'repeat(2, 5fr)'
+        ]}
+      >
         <Skeleton
           h='100%'
           w='100%'
@@ -40,7 +44,7 @@ const DevBlogs: React.FC = () => {
             })}
         </Skeleton>
       </Grid>
-    </Box>
+    </Container>
   );
 };
 

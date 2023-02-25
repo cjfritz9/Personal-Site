@@ -6,7 +6,8 @@ import {
   Image,
   Skeleton,
   Stack,
-  Text
+  Text,
+  useMediaQuery
 } from '@chakra-ui/react';
 import { BlogPostProps } from '../models/Props';
 import NavLink from './NavLink';
@@ -17,8 +18,19 @@ import { ArticleResponseData } from '../models/API';
 
 const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
   const [blog, setBlog] = useState<ArticleResponseData | null>(null);
+  const [isImageHovered, setIsImageHovered] = useState(false);
   const { setIsHovering } = useContext<any>(SiteContext);
-  const navigate = useNavigate();
+  const [isDisplayingInBrowser] = useMediaQuery(['(display-mode: browser)']);
+
+  const handleHover = (mouseEvent: 'enter' | 'leave') => {
+    if (mouseEvent === 'enter') {
+      setIsHovering(true);
+      setIsImageHovered(true);
+    } else {
+      setIsHovering(false);
+      setIsImageHovered(false);
+    }
+  };
 
   useEffect(() => {
     fetchArticleById(id, setBlog);
@@ -31,15 +43,15 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
       isLoaded={blog && blog.title ? true : false}
       fadeDuration={1.5}
     >
-      <Box>
+      <Box w='100%'>
         {blog && (
-          <Stack justifyContent='space-between'>
+          <Stack w='100%' justifyContent='space-between'>
             <Heading
               userSelect='none'
               fontFamily='Inter'
               color='Brand.Cyan'
-              size='lg'
-              textAlign='justify'
+              fontSize={['18px', '22px', '24px', '24px', '24px', '28px']}
+              textAlign={['center', 'left']}
               textShadow='0 0 10px #FFFFFF25'
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
@@ -47,36 +59,57 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
             >
               {blog.title}
             </Heading>
-            <Flex mt='1.5rem !important'>
+            <Flex
+              w='100%'
+              pos='relative'
+              overflow={['visible','hidden']}
+              mt='1.5rem !important'
+              onMouseEnter={() => handleHover('enter')}
+              onMouseLeave={() => handleHover('leave')}
+              onClick={() => window.open(blog.url, '_blank')}
+            >
               <Image
                 src={blog.image_url}
-                _hover={{
-                  filter: 'brightness(.6)',
-                  boxShadow: '0 0 10px #E0FBFC',
-                  transition: 'filter .5s ease, box-shadow .25s ease'
-                }}
+                filter={
+                  isImageHovered || !isDisplayingInBrowser
+                    ? 'brightness(.1)'
+                    : 'brightness(1)'
+                }
+                boxShadow={
+                  isImageHovered || !isDisplayingInBrowser
+                    ? '0 0 10px #E0FBFC'
+                    : 'none'
+                }
                 transition='filter .5s ease, box-shadow .5s ease'
                 cursor='var(--cursorHover)'
-                objectFit='cover'
-                maxH='300px'
+                objectFit='contain'
                 mr='3rem'
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)}
-                onClick={() => window.open(blog.url, '_blank')}
               />
-              <Stack minW='160px' justifyContent='space-between'>
+              <Stack
+                transform='auto'
+                translateY={
+                  isImageHovered || !isDisplayingInBrowser ? '-100%' : '0%'
+                }
+                transition='transform .5s ease'
+                top='100%'
+                px={['1rem', '2rem']}
+                py={['1rem', '2rem']}
+                pos='absolute'
+                minW='160px'
+                h='100%'
+                justifyContent='flex-start'
+              >
                 <Text
                   userSelect='none'
-                  pt='1rem'
-                  pb='1rem'
+                  pl='4px'
                   fontFamily='Poppins'
-                  fontSize='20px'
+                  fontSize={['14px', '18px', '22px', '16px', '18px', '24px']}
                   color='Brand.PaleBlue'
                   textShadow='0 0 10px #FFFFFF25'
                 >
                   {blog.subtitle}
                 </Text>
-                <Flex justifyContent='left'>
+                <Flex justifyContent={['center', 'left']}>
                   <NavLink
                     text='Read More'
                     altLink={blog.url}

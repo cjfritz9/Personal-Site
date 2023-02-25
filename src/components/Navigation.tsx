@@ -79,7 +79,6 @@ const Navigation: React.FC = () => {
   }, [isLessThan768]);
 
   useEffect(() => {
-    console.log(touchPosition.start, touchPosition.end);
     if (touchPosition.start && touchPosition.end) {
       if (touchPosition.start > touchPosition.end) {
         setShowNav(false);
