@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { MdMenu, MdMenuOpen } from 'react-icons/md';
+import { useNavigate } from 'react-router';
 import NavLink from './NavLink';
 
 const Navigation: React.FC = () => {
@@ -23,6 +24,7 @@ const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [isLessThan768] = useMediaQuery(['(max-width: 768px)']);
+  const navigate = useNavigate();
 
   const handleHoverChange = (mouseActivity: string) => {
     if (mouseActivity === 'enter-nav') {
@@ -69,6 +71,10 @@ const Navigation: React.FC = () => {
   };
 
   useEffect(() => {
+    setIsMenuOpen(false)
+  }, [navigate])
+
+  useEffect(() => {
     if (isLessThan768) {
       document.addEventListener('touchstart', (e) => touchStartHandler(e));
       document.addEventListener('touchend', (e) => touchEndHandler(e));
@@ -82,7 +88,8 @@ const Navigation: React.FC = () => {
     if (touchPosition.start && touchPosition.end) {
       if (touchPosition.start > touchPosition.end) {
         setShowNav(false);
-        setIsMenuOpen(false);
+        // testing
+        // setIsMenuOpen(false);
       } else {
         setShowNav(true);
       }

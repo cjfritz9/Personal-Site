@@ -12,7 +12,6 @@ import {
 import { BlogPostProps } from '../models/Props';
 import NavLink from './NavLink';
 import { SiteContext } from '../context/SiteContext';
-import { useNavigate } from 'react-router';
 import { fetchArticleById } from '../api/MediumAPI';
 import { ArticleResponseData } from '../models/API';
 
