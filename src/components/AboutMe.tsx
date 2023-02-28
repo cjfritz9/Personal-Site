@@ -88,7 +88,7 @@ const AboutMe: React.FC = () => {
               have worked on a variety of projects, from game plugins to
               full-stack web applications, including a
               <NavLink
-                text='Facebook-clone for Developers'
+                text='Facebook clone for developers'
                 isExternal={true}
                 altLink='https://github.com/Social-Stack/Social-Media-Stack'
               />
@@ -106,7 +106,7 @@ const AboutMe: React.FC = () => {
             >
               My passion for problem-solving drives me to code nearly every day,
               and I love collaborating with others, especially designers and
-              those with great ideas. I find that working with people who
+              those with great ideas. I find that working with people that
               complement my skill set gives me a great sense of direction and
               excitement.
             </Text>

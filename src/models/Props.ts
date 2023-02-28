@@ -24,6 +24,6 @@ export interface ProductProps {
   description: string;
   deployment: string;
   repo: string;
-  demo: string;
+  demo?: string;
   releaseDate: string;
 }

@@ -22,7 +22,7 @@ const Work: React.FC<ProductProps> = ({
   const [hasVideo, setHasVideo] = useState(true);
 
   useEffect(() => {
-    if (demo === 'https://www.youtube.com') {
+    if (!demo) {
       setHasVideo(false);
     }
   }, []);
