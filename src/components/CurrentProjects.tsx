@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Heading } from '@chakra-ui/react';
+import { Container, Grid, Heading } from '@chakra-ui/react';
 import Project from './Project';
 import Projects from '../db/Projects';
 
