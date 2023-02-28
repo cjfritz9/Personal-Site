@@ -7,7 +7,7 @@ const Products: ProductProps[] = [
     title: 'ASTRA Skincare',
     description:
       "ASTRA Skincare is a demo site created as as proof-of-concept to the advantages of using a custom React front-end with the power of Shopify's Admin for business management.",
-    deployment: 'https://astra-skincare.netlify.app',
+    deployment: 'https://astra-skincare.com',
     repo: 'https://www.github.com/AtlasCreative/astra-skincare',
     demo: 'https://www.youtube.com',
     releaseDate: 'Feb. 23, 2023'
