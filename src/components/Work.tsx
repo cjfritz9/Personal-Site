@@ -1,5 +1,13 @@
-import React from 'react';
-import { Box, Divider, Flex, Heading, Stack, Text } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  Link,
+  Stack,
+  Text
+} from '@chakra-ui/react';
 import { ProductProps } from '../models/Props';
 import NavLink from './NavLink';
 
@@ -11,6 +19,14 @@ const Work: React.FC<ProductProps> = ({
   demo,
   releaseDate
 }) => {
+  const [hasVideo, setHasVideo] = useState(true);
+
+  useEffect(() => {
+    if (demo === 'https://www.youtube.com') {
+      setHasVideo(false);
+    }
+  }, []);
+
   return (
     <Flex mb='2rem'>
       <Stack>
@@ -32,7 +48,17 @@ const Work: React.FC<ProductProps> = ({
         <Flex justify='space-between'>
           <NavLink text='Deployment' altLink={deployment} isExternal={true} />
           <NavLink text='Repository' altLink={repo} isExternal={true} />
-          <NavLink text='Video' altLink={demo} isExternal={true} />
+          {hasVideo ? (
+            <NavLink text='Video' altLink={demo} isExternal={true} />
+          ) : (
+            <Link
+              _hover={{ pointerEvents: 'none' }}
+              textDecor='line-through'
+              color='red.300'
+            >
+              Video
+            </Link>
+          )}
         </Flex>
         <Divider borderColor='brand.Charcoal' />
         <Stack pt='1rem'>
