@@ -8,11 +8,6 @@ const Projects: ProjectProps[] = [
     title: 'Fifty Projects',
     thumbnail: FiftyFifty_Thumb,
     href: 'https://50-50.netlify.app'
-  },
-  {
-    title: 'Elden Creator',
-    thumbnail: ERC_Thumb,
-    href: 'https://eldencreator.com'
   }
 ];
 

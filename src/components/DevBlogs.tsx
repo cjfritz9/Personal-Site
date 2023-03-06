@@ -31,18 +31,18 @@ const DevBlogs: React.FC = () => {
           'repeat(2, 5fr)'
         ]}
       >
-        <Skeleton
+        {/* <Skeleton
           h='100%'
           w='100%'
           isLoaded={blogIds && blogIds[0] ? true : false}
           fadeDuration={1}
-        >
+        > */}
           {blogIds &&
             blogIds[0] &&
             blogIds.map((id: string, i: number) => {
               return <BlogPost key={i} id={id} />;
             })}
-        </Skeleton>
+        {/* </Skeleton> */}
       </Grid>
     </Container>
   );
