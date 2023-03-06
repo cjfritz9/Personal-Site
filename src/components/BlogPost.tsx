@@ -46,6 +46,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
         {blog && (
           <Stack w='100%' justifyContent='space-between'>
             <Heading
+              h='72px'
               userSelect='none'
               fontFamily='Inter'
               color='Brand.Cyan'
@@ -79,7 +80,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
                 }
                 transition='filter .5s ease, box-shadow .5s ease'
                 cursor='var(--cursorHover)'
-                objectFit='contain'
+                objectFit='cover'
+                w='100%'
+                h='416px'
               />
               <Stack
                 transform='auto'

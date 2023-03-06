@@ -28,7 +28,7 @@ const Work: React.FC<ProductProps> = ({
   }, []);
 
   return (
-    <Flex mb='2rem'>
+    <Flex mb='2rem' mr={['0rem','1rem','2rem']}>
       <Stack>
         <Heading
           mb='-1rem'

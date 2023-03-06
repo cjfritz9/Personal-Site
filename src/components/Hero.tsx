@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ heading }) => {
           w='100%'
           pos='absolute'
           userSelect='none'
-          top={['6dvh','9dvh','1dvh', '4dvh', '6dvh', '12dvh']}
+          top={['6dvh','9dvh','1dvh', '4dvh', '6dvh', '8dvh']}
           color='Brand.Sienna'
           fontSize={['40px', '48px', '72px']}
           textAlign='center'
@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ heading }) => {
           pos='absolute'
           userSelect='none'
           transform='scale(1, -1)'
-          top={['','','10dvh', '13dvh', '15dvh', '24dvh']}
+          top={['','','10dvh', '13dvh', '15dvh', '16dvh']}
           color='#EE6C4D35'
           textShadow='0 -6px 0px #EE6C4D25, 0 0 40px #EE6C4D50'
           fontSize={['40px', '48px', '72px']}
