@@ -87,7 +87,7 @@ const Navigation: React.FC = () => {
   useEffect(() => {
     if (isMenuOpen && touchPosition.start <= 120) return;
     if (touchPosition.start && touchPosition.end) {
-      if (touchPosition.start > touchPosition.end) {
+      if (touchPosition.start > touchPosition.end - 50) {
         setShowNav(false);
         // testing
         // setIsMenuOpen(false);
