@@ -81,17 +81,17 @@ const MailForm: React.FC = () => {
               >
                 {message.length > 0 && message}
               </Text>
-              <Tooltip label='Bugfixing 3/7/23'>
-                <Button
-                  isDisabled
-                  bgColor='Brand.Cyan'
-                  color='Brand.Charcoal'
-                  w={['100%', '10rem']}
-                  onClick={handleSend}
-                >
-                  {isLoading ? <Spinner /> : 'Send'}
-                </Button>
-              </Tooltip>
+              {/* <Tooltip label='Bugfixing 3/7/23'> */}
+              <Button
+                // isDisabled
+                bgColor='Brand.Cyan'
+                color='Brand.Charcoal'
+                w={['100%', '10rem']}
+                onClick={handleSend}
+              >
+                {isLoading ? <Spinner /> : 'Send'}
+              </Button>
+              {/* </Tooltip> */}
             </Flex>
           </Stack>
         </FormControl>
