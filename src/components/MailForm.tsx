@@ -9,7 +9,8 @@ import {
   Container,
   Heading,
   Button,
-  Spinner
+  Spinner,
+  Tooltip
 } from '@chakra-ui/react';
 import { validateMailForm } from '../utils/helpers';
 import sendMail from '../api/EmailAPI';
@@ -80,14 +81,17 @@ const MailForm: React.FC = () => {
               >
                 {message.length > 0 && message}
               </Text>
-              <Button
-                bgColor='Brand.Cyan'
-                color='Brand.Charcoal'
-                w={['100%','10rem']}
-                onClick={handleSend}
-              >
-                {isLoading ? <Spinner /> : 'Send'}
-              </Button>
+              <Tooltip label='Bugfixing 3/7/23'>
+                <Button
+                  isDisabled
+                  bgColor='Brand.Cyan'
+                  color='Brand.Charcoal'
+                  w={['100%', '10rem']}
+                  onClick={handleSend}
+                >
+                  {isLoading ? <Spinner /> : 'Send'}
+                </Button>
+              </Tooltip>
             </Flex>
           </Stack>
         </FormControl>
