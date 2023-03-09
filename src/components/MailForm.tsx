@@ -55,6 +55,10 @@ const MailForm: React.FC = () => {
     <Container h='100%'>
       <Heading variant='contentHeading'>CONTACT ME</Heading>
       <Stack w={['320px', '480px', '720px']} alignSelf='center'>
+        <Heading mb='1rem' textAlign='center' color='Brand.Cyan'>
+          This Form is Pending GCP Debugging. For now you can contact me at:{' '}
+        </Heading>
+        <Heading mb='2rem !important' textAlign='center' color='Brand.Cyan'>dev.cjfritz@gmail.com</Heading>
         <FormControl>
           <Stack gap='1rem' fontFamily='Poppins' color='Brand.Cyan'>
             <Stack gap='.5rem' onClick={() => setMessage('')}>
