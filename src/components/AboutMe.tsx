@@ -31,8 +31,9 @@ const AboutMe: React.FC = () => {
             >
               Hi there! My name is C.J. Fritz and I am a web developer based in
               Denver, Colorado. I am 29 years old and my passion for coding
-              began just over six months ago when I wrote my first line of
-              JavaScript on August 4th, 2022.
+              began when I was very young playing games on the family computer.
+              It wasn't until my late 20's that I was able to pursue this
+              passion when I took an online web development course.
             </Text>
             <Text
               userSelect='none'
@@ -43,11 +44,12 @@ const AboutMe: React.FC = () => {
               textAlign='left'
               textShadow='0 0 10px #FFFFFF25'
             >
-              Since then, I have completed Fullstack Academy's Web Developer
-              Bootcamp in October of 2022 and have also completed 6 Udemy
-              courses with over 145 hours of lecture. These courses cover a wide
-              range of topics, including TypeScript, Google Cloud Platform,
-              Unreal Engine 5 and C++, and Shopify.
+              Since then, I attended and graduated Fullstack Academy's Web
+              Developer Bootcamp in 2022 and since then I have done nothing but
+              create websites and software in my free time. I have also
+              completed 6 Udemy courses with over 145 hours of lecture. These
+              courses cover a wide range of topics, including TypeScript, Google
+              Cloud Platform, Unreal Engine 5/C++, and Shopify.
             </Text>
             <Text
               userSelect='none'
@@ -126,13 +128,12 @@ const AboutMe: React.FC = () => {
             </Text>
           </Stack>
         </Box>
-        <Stack w='100%' justify='flex-end'>
+        <Stack w='100%' maxH='600px' justify='flex-end'>
           <Image
-            src='https://st3.depositphotos.com/9998432/13335/v/600/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg'
-            alt='Photo of the developer'
-            maxH={['300px','420px', '560px']}
+            src='https://i.ibb.co/J76Y7Dh/received-893397865297921.jpg'
+            alt='Photo of the C.J.'
+            h='100%'
             objectFit='contain'
-            mixBlendMode='multiply'
           />
         </Stack>
       </Grid>
