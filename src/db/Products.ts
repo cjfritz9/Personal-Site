@@ -20,7 +20,7 @@ const Products: ProductProps[] = [
   {
     title: 'Cat-GPT',
     description:
-      'Cat-GPT was a fun and cute project that I completed to get some hands-on experience with OpenAI APIs, Google App Engine, and Google Cloud SQL.',
+      'Cat-GPT was a fun and cute project that I completed to get some hands-on experience with OpenAI APIs, Google App Engine, Google Cloud SQL, and Mocha/Chai.',
     deployment: 'https://cat-gpt3.netlify.app',
     repo: 'https://github.com/cjfritz9/chat-assistant',
     releaseDate: 'Apr. 1, 2023'
