@@ -130,7 +130,7 @@ const AboutMe: React.FC = () => {
         </Box>
         <Stack w='100%' maxH='600px' justify='flex-end'>
           <Image
-            src='https://i.ibb.co/J76Y7Dh/received-893397865297921.jpg'
+            src='https://i.ibb.co/3S2ywHC/received-893397865297921.jpg'
             alt='Photo of the C.J.'
             h='100%'
             objectFit='contain'
