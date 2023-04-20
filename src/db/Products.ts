@@ -37,7 +37,7 @@ const Products: ProductProps[] = [
     title: 'PokeStop',
     description:
       "PokeStop was my Capstone project that I collaborated on with 3 people in my class at Full Stack Academy. It is a full stack mock Pokemon TCG ecommerce store. I recently converted this project to use Firestore in order to take advantage of GCP's free tier.",
-    deployment: 'https://eldencreator.com',
+    deployment: 'https://pokestop-demo.netlify.app',
     repo: 'https://github.com/Graceshopper-Team-No-Grace/Trading-Card-Shopper',
     releaseDate: 'Oct. 17, 2022'
   },
