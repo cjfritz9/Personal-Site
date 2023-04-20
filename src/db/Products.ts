@@ -10,6 +10,14 @@ const Products: ProductProps[] = [
     releaseDate: 'Feb. 23, 2023'
   },
   {
+    title: 'Social Stack',
+    description:
+      'Social Stack is a social media clone website with a developer-focused theme. It was a collaboration between myself and 3 friends that I graduate from Full Stack Academy with.',
+    deployment: 'https://social-stack-demo.netlify.app/',
+    repo: 'https://github.com/Social-Stack/Social-Media-Stack',
+    releaseDate: 'Dec. 6, 2022'
+  },
+  {
     title: 'Personal Express Server',
     description:
       'Source code for my personal express server that I use to handle contact form emails and various other API calls from my projects.',
@@ -24,6 +32,14 @@ const Products: ProductProps[] = [
     deployment: 'https://cat-gpt3.netlify.app',
     repo: 'https://github.com/cjfritz9/chat-assistant',
     releaseDate: 'Apr. 1, 2023'
+  },
+  {
+    title: 'PokeStop',
+    description:
+      "PokeStop was my Capstone project that I collaborated on with 3 people in my class at Full Stack Academy. It is a full stack mock Pokemon TCG ecommerce store. I recently converted this project to use Firestore in order to take advantage of GCP's free tier.",
+    deployment: 'https://eldencreator.com',
+    repo: 'https://github.com/Graceshopper-Team-No-Grace/Trading-Card-Shopper',
+    releaseDate: 'Oct. 17, 2022'
   },
   {
     title: 'Elden Creator',

@@ -1,7 +1,6 @@
 import { ProjectProps } from '../models/Props';
 
 import FiftyFifty_Thumb from '../assets/50-50-thumb.png';
-import ERC_Thumb from '../assets/erc-thumb.png';
 
 const Projects: ProjectProps[] = [
   {

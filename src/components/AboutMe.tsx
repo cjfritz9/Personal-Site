@@ -45,11 +45,11 @@ const AboutMe: React.FC = () => {
               textShadow='0 0 10px #FFFFFF25'
             >
               Since then, I attended and graduated Fullstack Academy's Web
-              Developer Bootcamp in 2022 and I have done nothing but
-              create websites and software in my free time. I have also
-              completed 6 Udemy courses with over 145 hours of lecture. These
-              courses cover a wide range of topics, including TypeScript, Google
-              Cloud Platform, Unreal Engine 5/C++, and Shopify.
+              Developer Bootcamp in 2022 and I have done nothing but create
+              websites and software in my free time. I have also completed 6
+              Udemy courses with over 145 hours of lecture. These courses cover
+              a wide range of topics, including TypeScript, Google Cloud
+              Platform, Unreal Engine 5/C++, and Shopify.
             </Text>
             <Text
               userSelect='none'
