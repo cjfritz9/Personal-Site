@@ -1,48 +1,57 @@
-import React from 'react';
-import { Container, Divider, Flex, Heading, Stack } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import {
+  Box,
+  Container,
+  Divider,
+  Flex,
+  Heading,
+  Stack
+} from '@chakra-ui/react';
 import NavLink from './NavLink';
+import MailForm from './MailForm';
 
 const ContactMe: React.FC = () => {
+  const [emailText, setEmailText] = useState('dev.cjfritz@gmail.com');
+
+  const handleEmailCopy = () => {
+    navigator.clipboard.writeText('dev.cjfritz@gmail.com');
+    setEmailText('Copied To Clipboard!');
+    setTimeout(() => {
+      setEmailText('dev.cjfritz@gmail.com');
+    }, 2500);
+  };
+
   return (
     <Container>
       <Heading variant='contentHeading'>CONTACT ME</Heading>
-      <Stack
-        gap='1rem'
-        w={['100%', 'fit-content']}
-        alignItems={['center', 'left']}
-      >
-        <Heading color='Brand.Sienna' size='xl'>
-          C.J. Fritz
-        </Heading>
-        <Divider borderColor='Brand.MetalBlue' />
-        <Heading
-          fontFamily='Poppins'
-          fontSize='16px'
-          pl='7px'
-          color='Brand.Cyan'
-          size='sm'
+      <Stack w='fit-content' gap='2.5rem' justify='space-between'>
+        <Flex
+          gap='1rem'
+          w={['100%']}
+          justify='space-between'
+          alignItems={['center', 'left']}
+          flexWrap='wrap'
         >
-          Denver, CO
-        </Heading>
-        <Heading
-          fontFamily='Poppins'
-          fontSize='16px'
-          pl='7px'
-          color='Brand.Cyan'
-          size='sm'
-        >
-          dev.cjfritz@gmail.com
-        </Heading>
-        <NavLink
-          text='LinkedIn'
-          altLink='https://www.linkedin.com/in/cj-fritz/'
-          isExternal={true}
-        />
-        <NavLink
-          text='GitHub'
-          altLink='https://www.github.com/cjfritz9'
-          isExternal={true}
-        />
+          <NavLink
+            text='Denver, CO'
+            altLink='https://goo.gl/maps/KDSv3stZVduxv6YLA'
+            isExternal
+          />
+          <Box onClick={handleEmailCopy}>
+            <NavLink isNonLink text={emailText} altLink='#' />
+          </Box>
+          <NavLink
+            text='LinkedIn'
+            altLink='https://www.linkedin.com/in/cj-fritz/'
+            isExternal={true}
+          />
+          <NavLink
+            text='GitHub'
+            altLink='https://www.github.com/cjfritz9'
+            isExternal={true}
+          />
+        </Flex>
+        <MailForm />
       </Stack>
     </Container>
   );

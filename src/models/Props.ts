@@ -13,6 +13,7 @@ export interface NavLinkProps {
   altLink?: string;
   fontSize?: string;
   isExternal?: boolean;
+  isNonLink?: boolean;
 }
 
 export interface BlogPostProps {

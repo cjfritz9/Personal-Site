@@ -9,7 +9,8 @@ const NavLink: React.FC<NavLinkProps> = ({
   text,
   fontSize,
   altLink,
-  isExternal = false
+  isExternal = false,
+  isNonLink = false
 }) => {
   const { setIsHovering, setIsLoading } = useContext<any>(SiteContext);
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ const NavLink: React.FC<NavLinkProps> = ({
         fontSize={fontSize && `${fontSize}px`}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        onClick={() => handleNavigate()}
+        onClick={isNonLink ? undefined : () => handleNavigate()}
       >
         {text}
       </Link>

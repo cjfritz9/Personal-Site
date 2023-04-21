@@ -55,9 +55,7 @@ const MailForm: React.FC = () => {
   };
 
   return (
-    <Container h='100%'>
-      <Heading variant='contentHeading'>CONTACT ME</Heading>
-      <Stack w={['320px', '480px', '720px']} alignSelf='center'>
+      <Stack w={['100%', '480px', '720px']}>
         <FormControl>
           <Stack gap='1rem' fontFamily='Poppins' color='Brand.Cyan'>
             <Stack gap='.5rem' onClick={() => setMessage('')}>
@@ -99,7 +97,6 @@ const MailForm: React.FC = () => {
           </Stack>
         </FormControl>
       </Stack>
-    </Container>
   );
 };
 

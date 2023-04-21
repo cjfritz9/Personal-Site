@@ -8,8 +8,8 @@ const Contact: React.FC = () => {
   return (
     <Stack>
       <Hero heading='CONTACT' />
-      {/* <ContactMe /> */}
-      <MailForm />
+      <ContactMe />
+      {/* <MailForm /> */}
     </Stack>
   );
 };

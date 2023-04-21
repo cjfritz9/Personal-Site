@@ -27,24 +27,25 @@ const Navigation: React.FC = () => {
   const navigate = useNavigate();
 
   const handleHoverChange = (mouseActivity: string) => {
-    if (mouseActivity === 'enter-nav') {
-      setIsHovered((prev) => ({
-        ...prev,
-        navBar: true
-      }));
-      setShowNav(true);
-    } else if (mouseActivity === 'leave-nav') {
-      setIsHovered((prev) => ({
-        ...prev,
-        navBar: false
-      }));
-      setShowNav(false);
-    } else if (mouseActivity === 'enter-home') {
+    // if (mouseActivity === 'enter-nav') {
+    //   setIsHovered((prev) => ({
+    //     ...prev,
+    //     navBar: true
+    //   }));
+    //   setShowNav(true);
+    // } else if (mouseActivity === 'leave-nav') {
+    //   setIsHovered((prev) => ({
+    //     ...prev,
+    //     navBar: false
+    //   }));
+    //   setShowNav(false);
+    // } else
+    if (mouseActivity === 'enter-home') {
       setIsHovered((prev) => ({
         ...prev,
         homeLink: true
       }));
-      setShowNav(true);
+      // setShowNav(true);
     } else {
       setIsHovered((prev) => ({
         ...prev,
@@ -76,7 +77,7 @@ const Navigation: React.FC = () => {
   }, [navigate]);
 
   const updater = () => {
-    if (window.scrollY < 120) {
+    if (window.scrollY < 480) {
       setShowNav(false);
     } else {
       setShowNav(true);
