@@ -10,7 +10,7 @@ const MyWork: React.FC = () => {
       <Grid
         templateColumns={[
           'repeat(1, 6fr)',
-          'repeat(2, 3fr)',
+          'repeat(1, 6fr)',
           'repeat(2, 3fr)',
           'repeat(3, 2fr)'
         ]}

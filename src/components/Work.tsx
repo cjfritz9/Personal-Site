@@ -28,7 +28,7 @@ const Work: React.FC<ProductProps> = ({
   }, []);
 
   return (
-    <Flex mb='5rem' mr={['0rem', '2rem']}>
+    <Flex mb='5rem' mr={['0rem', '2rem', '2rem','3rem', '5rem']}>
       <Stack>
         <Heading
           mb='-1rem'
@@ -41,9 +41,14 @@ const Work: React.FC<ProductProps> = ({
         >
           {title}
         </Heading>
-        <Text size='lg' color='Brand.Sienna' fontFamily='Poppins'>
-          V1 Release: {releaseDate}
-        </Text>
+        <Flex gap='.5rem'>
+          <Text size='lg' color='Brand.Sienna' fontFamily='Poppins'>
+            V1 Release:
+          </Text>
+          <Text size='lg' color='Brand.Cyan' fontFamily='Poppins'>
+            {releaseDate}
+          </Text>
+        </Flex>
         <Divider borderColor='brand.Charcoal' />
         <Flex justify='space-between'>
           <NavLink text='Deployment' altLink={deployment} isExternal={true} />

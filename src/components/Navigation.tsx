@@ -20,7 +20,7 @@ const Navigation: React.FC = () => {
     navBar: false,
     homeLink: false
   });
-  const [touchPosition, setTouchPosition] = useState({ start: 0, end: 0 });
+  // const [touchPosition, setTouchPosition] = useState({ start: 0, end: 0 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [isLessThan768] = useMediaQuery(['(max-width: 768px)']);
@@ -53,49 +53,43 @@ const Navigation: React.FC = () => {
     }
   };
 
-  const touchStartHandler = (start: TouchEvent) => {
-    let _start = start.changedTouches[0].clientY;
-    setTouchPosition((prev) => ({
-      ...prev,
-      start: _start
-    }));
-  };
+  // const touchStartHandler = (start: TouchEvent) => {
+  //   console.log('y pos', window.scrollY)
+  //   let _start = start.changedTouches[0].clientY;
+  //   setTouchPosition((prev) => ({
+  //     ...prev,
+  //     start: _start
+  //   }));
+  // };
 
-  const touchEndHandler = (end: TouchEvent) => {
-    let _end = end.changedTouches[0].clientY;
+  // const touchEndHandler = (end: TouchEvent) => {
+  //   let _end = end.changedTouches[0].clientY;
 
-    setTouchPosition((prev) => ({
-      ...prev,
-      end: _end
-    }));
-  };
+  //   setTouchPosition((prev) => ({
+  //     ...prev,
+  //     end: _end
+  //   }));
+  // };
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [navigate]);
 
-  useEffect(() => {
-    if (isLessThan768) {
-      document.addEventListener('touchstart', (e) => touchStartHandler(e));
-      document.addEventListener('touchend', (e) => touchEndHandler(e));
+  const updater = () => {
+    if (window.scrollY < 120) {
+      setShowNav(false);
     } else {
-      document.removeEventListener('touchstart', (e) => touchStartHandler(e));
-      document.removeEventListener('touchend', (e) => touchEndHandler(e));
+      setShowNav(true);
     }
-  }, [isLessThan768]);
+  };
 
   useEffect(() => {
-    if (isMenuOpen && touchPosition.start <= 120) return;
-    if (touchPosition.start && touchPosition.end) {
-      if (touchPosition.start > touchPosition.end - 50) {
-        setShowNav(false);
-        // testing
-        // setIsMenuOpen(false);
-      } else {
-        setShowNav(true);
-      }
+    if (isLessThan768) {
+      window.addEventListener('scroll', updater);
+    } else {
+      window.removeEventListener('scroll', updater);
     }
-  }, [{ ...touchPosition }]);
+  }, [isLessThan768]);
 
   return (
     <Flex
@@ -114,22 +108,6 @@ const Navigation: React.FC = () => {
       onMouseEnter={() => handleHoverChange('enter-nav')}
       onMouseLeave={() => handleHoverChange('leave-nav')}
     >
-      {/* <Box
-        pos='absolute'
-        h='100vh'
-        w='1px'
-        bgColor='Brand.Cyan'
-        left='50%'
-        top='0%'
-      />
-      <Box
-        pos='absolute'
-        w='100vw'
-        h='1px'
-        bgColor='Brand.Cyan'
-        left='0%'
-        top='50%'
-      /> */}
       <Box
         pos={isLessThan768 ? 'absolute' : 'fixed'}
         top={isLessThan768 ? '16px' : '12px'}
