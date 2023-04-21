@@ -12,7 +12,7 @@ const Products: ProductProps[] = [
   {
     title: 'Social Stack',
     description:
-      'Social Stack is a social media clone website with a developer-focused theme. It was a collaboration between myself and 3 friends that I graduate from Full Stack Academy with.',
+      'Social Stack is a social media clone website with a developer-focused theme. It was a collaboration between myself and 3 friends that I graduated from Full Stack Academy with.',
     deployment: 'https://social-stack-demo.netlify.app/',
     repo: 'https://github.com/Social-Stack/Social-Media-Stack',
     releaseDate: 'Dec. 6, 2022'
