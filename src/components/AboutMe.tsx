@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Box,
   Container,
+  Flex,
   Grid,
   Heading,
   Image,
@@ -15,9 +16,7 @@ const AboutMe: React.FC = () => {
   return (
     <Container>
       <Heading variant='contentHeading'>ABOUT ME</Heading>
-      <Grid
-        templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']}
-      >
+      <Flex direction={['column-reverse', 'column-reverse', 'row']} gap='3rem'>
         <Box w='100%'>
           <Stack w='100%'>
             <Text
@@ -136,7 +135,7 @@ const AboutMe: React.FC = () => {
             objectFit='contain'
           />
         </Stack>
-      </Grid>
+      </Flex>
     </Container>
   );
 };
