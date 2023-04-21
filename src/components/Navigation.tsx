@@ -84,12 +84,8 @@ const Navigation: React.FC = () => {
   };
 
   useEffect(() => {
-    if (isLessThan768) {
-      window.addEventListener('scroll', updater);
-    } else {
-      window.removeEventListener('scroll', updater);
-    }
-  }, [isLessThan768]);
+    window.addEventListener('scroll', updater);
+  }, []);
 
   return (
     <Flex
@@ -105,12 +101,12 @@ const Navigation: React.FC = () => {
       // pos='relative'
       boxShadow='0px 2px 10px #00000050'
       zIndex={5}
-      onMouseEnter={() => handleHoverChange('enter-nav')}
-      onMouseLeave={() => handleHoverChange('leave-nav')}
+      // onMouseEnter={() => handleHoverChange('enter-nav')}
+      // onMouseLeave={() => handleHoverChange('leave-nav')}
     >
       <Box
-        pos={isLessThan768 ? 'absolute' : 'fixed'}
-        top={isLessThan768 ? '16px' : '12px'}
+        pos={showNav ? 'fixed' : 'absolute'}
+        top={showNav ? '16px' : '12px'}
         left='24px'
         onMouseEnter={() => handleHoverChange('enter-home')}
         onMouseLeave={() => handleHoverChange('leave-home')}
