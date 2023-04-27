@@ -32,7 +32,7 @@ const AboutMe: React.FC = () => {
               Denver, Colorado. I am 29 years old and my passion for coding
               began when I was very young playing games on the family computer.
               It wasn't until my late 20's that I was able to pursue this
-              passion when I took an online web development course.
+              passion when I took my first web development course.
             </Text>
             <Text
               userSelect='none'
@@ -45,10 +45,10 @@ const AboutMe: React.FC = () => {
             >
               Since then, I attended and graduated Fullstack Academy's Web
               Developer Bootcamp in 2022 and I have done nothing but create
-              websites and software in my free time. I have also completed 6
-              Udemy courses with over 145 hours of lecture. These courses cover
+              websites and software in my free time. I have also completed several
+              Udemy courses with hundreds of hours of lecture. These courses cover
               a wide range of topics, including TypeScript, Google Cloud
-              Platform, Unreal Engine 5/C++, and Shopify.
+              Platform, Docker, and C++.
             </Text>
             <Text
               userSelect='none'
