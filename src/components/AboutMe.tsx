@@ -85,7 +85,7 @@ const AboutMe: React.FC = () => {
                 isExternal={true}
                 altLink='https://www.github.com/cjfritz9'
               />
-              , with over 1,300 contributions and 36 repositories to my name. I
+              , with over 1,800 contributions and 47 repositories to my name. I
               have worked on a variety of projects, from game plugins to
               full-stack web applications, including a
               <NavLink
