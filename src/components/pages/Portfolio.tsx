@@ -3,13 +3,13 @@ import { Box }  from '@chakra-ui/react'
 import Hero from '../Hero';
 import MyWork from '../MyWork';
 
-const Demos: React.FC = () => {
+const Portfolio: React.FC = () => {
 return (
 <Box>
-    <Hero heading='DEMOS' />
+    <Hero heading='PORTFOLIO' />
     <MyWork />
 </Box>
 );
 }
 
-export default Demos;
+export default Portfolio;

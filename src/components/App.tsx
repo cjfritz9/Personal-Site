@@ -9,7 +9,7 @@ import Navigation from './Navigation';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-import Demos from './pages/Demos';
+import Demos from './pages/Portfolio';
 import Home from './pages/Home';
 
 const App: React.FC = () => {
@@ -31,11 +31,9 @@ const App: React.FC = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/blog' element={<Blog />} />
-        <Route path='/demos' element={<Demos />} />
+        <Route path='/portfolio' element={<Demos />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
-      {/* <Ankle /> */}
-      {/* <Footer /> */}
     </Box>
   );
 };

@@ -36,13 +36,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
   }, []);
 
   return (
-    <Skeleton
-      minH='336px'
-      w='100%'
-      isLoaded={blog && blog.title ? true : false}
-      fadeDuration={1.5}
-    >
-      <Box w='100%' pr={['0rem', '0rem', '2rem']} py='2rem'>
+      <Box minH='336px' minW='100%' w='100%' pr={['0rem', '0rem', '2rem']} py='2rem'>
         {blog && (
           <Stack w='100%' justifyContent='space-between'>
             <Heading
@@ -118,7 +112,6 @@ const BlogPost: React.FC<BlogPostProps> = ({ id }) => {
           </Stack>
         )}
       </Box>
-    </Skeleton>
   );
 };
 

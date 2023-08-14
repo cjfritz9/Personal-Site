@@ -48,7 +48,7 @@ const AboutMe: React.FC = () => {
               websites and software in my free time. I have also completed several
               Udemy courses with hundreds of hours of lecture. These courses cover
               a wide range of topics, including TypeScript, Google Cloud
-              Platform, Docker, and C++.
+              Platform, Docker, and Node.js.
             </Text>
             <Text
               userSelect='none'
@@ -127,7 +127,7 @@ const AboutMe: React.FC = () => {
             </Text>
           </Stack>
         </Box>
-        <Stack w='100%' maxH='600px' justify='flex-end'>
+        <Stack maxH='600px' w='100%' justify='flex-end'>
           <Image
             src='https://i.ibb.co/3S2ywHC/received-893397865297921.jpg'
             alt='Photo of the C.J.'

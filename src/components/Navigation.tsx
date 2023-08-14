@@ -27,25 +27,11 @@ const Navigation: React.FC = () => {
   const navigate = useNavigate();
 
   const handleHoverChange = (mouseActivity: string) => {
-    // if (mouseActivity === 'enter-nav') {
-    //   setIsHovered((prev) => ({
-    //     ...prev,
-    //     navBar: true
-    //   }));
-    //   setShowNav(true);
-    // } else if (mouseActivity === 'leave-nav') {
-    //   setIsHovered((prev) => ({
-    //     ...prev,
-    //     navBar: false
-    //   }));
-    //   setShowNav(false);
-    // } else
     if (mouseActivity === 'enter-home') {
       setIsHovered((prev) => ({
         ...prev,
         homeLink: true
       }));
-      // setShowNav(true);
     } else {
       setIsHovered((prev) => ({
         ...prev,
@@ -53,24 +39,6 @@ const Navigation: React.FC = () => {
       }));
     }
   };
-
-  // const touchStartHandler = (start: TouchEvent) => {
-  //   console.log('y pos', window.scrollY)
-  //   let _start = start.changedTouches[0].clientY;
-  //   setTouchPosition((prev) => ({
-  //     ...prev,
-  //     start: _start
-  //   }));
-  // };
-
-  // const touchEndHandler = (end: TouchEvent) => {
-  //   let _end = end.changedTouches[0].clientY;
-
-  //   setTouchPosition((prev) => ({
-  //     ...prev,
-  //     end: _end
-  //   }));
-  // };
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -99,11 +67,8 @@ const Navigation: React.FC = () => {
       justifyContent='flex-end'
       alignItems='center'
       px='1.5rem'
-      // pos='relative'
       boxShadow='0px 2px 10px #00000050'
       zIndex={5}
-      // onMouseEnter={() => handleHoverChange('enter-nav')}
-      // onMouseLeave={() => handleHoverChange('leave-nav')}
     >
       <Box
         pos={showNav ? 'fixed' : 'absolute'}
@@ -117,7 +82,6 @@ const Navigation: React.FC = () => {
           text={isHovered.homeLink || isLessThan768 ? '< Home >' : '</>'}
           altLink='/'
           fontSize={isLessThan768 ? '24' : '32'}
-          // letterSpacing='1px'
         />
       </Box>
       {isLessThan768 ? (
@@ -151,7 +115,7 @@ const Navigation: React.FC = () => {
                 {/* <Stack alignItems='flex-end'> */}
                 <NavLink text='About' fontSize='14' />
                 <NavLink text='Blog' fontSize='14' />
-                <NavLink text='Demos' fontSize='14' />
+                <NavLink text='Portfolio' fontSize='14' />
                 <NavLink text='Contact' fontSize='14' />
                 {/* </Stack> */}
               </Flex>
@@ -162,7 +126,7 @@ const Navigation: React.FC = () => {
         <Flex gap={['1rem', '2rem', '3rem']} justifyContent='flex-end'>
           <NavLink text='About' />
           <NavLink text='Blog' />
-          <NavLink text='Demos' />
+          <NavLink text='Portfolio' />
           <NavLink text='Contact' />
         </Flex>
       )}

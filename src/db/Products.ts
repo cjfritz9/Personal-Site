@@ -18,25 +18,25 @@ const Products: ProductProps[] = [
     releaseDate: 'Dec. 6, 2022'
   },
   {
-    title: 'Personal Express Server',
+    title: 'NASA Project',
     description:
-      'Source code for my personal express server that I use to handle contact form emails and various other API calls from my projects.',
-    deployment: 'https://github.com/cjfritz9/chat-gpt-express-server',
-    repo: 'https://github.com/cjfritz9/chat-gpt-express-server',
+      'NASA Kepler Telescope and Space-X launch data displayed on a React front-end server by an Express server. Leverages Kepler Telescope data to simulate creating NASA launches to the dynamically generated list of inhabitable planets. Includes Space-X launch data and persisted via MongoDB.',
+    deployment: 'https://nasa-project-4yjnpj6ixq-uc.a.run.app',
+    repo: 'https://github.com/cjfritz9/nasa-project',
     releaseDate: 'Mar. 18, 2023'
   },
   {
     title: 'Cat-GPT',
     description:
-      'Cat-GPT was a fun and cute project that I completed to get some hands-on experience with OpenAI APIs, Google App Engine, Google Cloud SQL, and Mocha/Chai.',
-    deployment: 'https://cat-gpt3.netlify.app',
+      'Cat-GPT was a fun and cute project that I completed to get some hands-on experience with OpenAI APIs, Google App Engine, Google Cloud SQL, Mocha/Chai, and OAuth2/SSO.',
+    deployment: 'https://catgpt.fritzdesign.co',
     repo: 'https://github.com/cjfritz9/chat-assistant',
     releaseDate: 'Apr. 1, 2023'
   },
   {
     title: 'PokeStop',
     description:
-      "PokeStop was my Capstone project that I collaborated on with 3 people in my class at Full Stack Academy. It is a full stack mock Pokemon TCG ecommerce store. I recently converted this project to use Firestore in order to take advantage of GCP's free tier.",
+      "PokeStop was my Capstone project that I collaborated on with 3 peer developers in my class at Full Stack Academy. It is a full stack mock Pokemon TCG ecommerce store. I recently converted this project to use Firestore and App Engine in order to take advantage of GCP's free tier.",
     deployment: 'https://pokestop-demo.netlify.app',
     repo: 'https://github.com/Graceshopper-Team-No-Grace/Trading-Card-Shopper',
     releaseDate: 'Oct. 17, 2022',
